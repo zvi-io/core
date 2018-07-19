@@ -10,6 +10,10 @@
         "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "com.toastwallet.core"
         },
+        "cordova-android-support-gradle-release": {
+            "ANDROID_SUPPORT_VERSION": "23.+",
+            "PACKAGE_NAME": "com.toastwallet.core"
+        },
         "cordova-build-architecture": {
             "PACKAGE_NAME": "com.toastwallet.core"
         },
@@ -59,17 +63,13 @@
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.toastwallet.core"
-        },
-        "cordova-android-support-gradle-release": {
-            "ANDROID_SUPPORT_VERSION": "23.+",
-            "PACKAGE_NAME": "com.toastwallet.core"
         }
     },
     "dependent_plugins": {
-        "es6-promise-plugin": {
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.toastwallet.core"
         },
-        "cordova-plugin-compat": {
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "com.toastwallet.core"
         }
     }

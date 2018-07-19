@@ -10,7 +10,13 @@
         "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "com.toastwallet.core"
         },
+        "cordova-android-support-gradle-release": {
+            "PACKAGE_NAME": "com.toastwallet.core"
+        },
         "cordova-build-architecture": {
+            "PACKAGE_NAME": "com.toastwallet.core"
+        },
+        "cordova-plugin-battery-status": {
             "PACKAGE_NAME": "com.toastwallet.core"
         },
         "cordova-plugin-camera": {
@@ -49,15 +55,16 @@
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.toastwallet.core"
         },
-        "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "com.toastwallet.core"
-        },
         "phonegap-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.toastwallet.core"
-        },
-        "cordova-android-support-gradle-release": {
             "PACKAGE_NAME": "com.toastwallet.core"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.toastwallet.core"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.toastwallet.core"
+        }
+    }
 }
