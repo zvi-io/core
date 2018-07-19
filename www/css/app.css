@@ -246,7 +246,7 @@ li.adtrustline:not(:first-of-type) {
 }
 
 .accountdetailsselector > *:not(.accdetailsinnertabselected) {
-    background: rgb(0, 81, 185) !important;
+    background: rgb(51, 122, 183) !important;
     color: white !important;
 }
 
@@ -367,7 +367,7 @@ div#accdetailsaddressdetails {
     animation: fa-spin 2s infinite linear;
     z-index: 101;
     content: "\f021";
-    color: #307ee0;
+    color: rgb(51, 122, 183);
     font: normal normal normal 4em/1 FontAwesome;
     -webkit-animation: fa-spin 2s infinite linear;
     text-rendering: auto;
@@ -536,7 +536,7 @@ div.input-group>span.input-group-btn>button {
     bottom: 0;
     width: 100vw;
     left: 0;
-    background: linear-gradient(45deg, #1959ab, #317fe2);
+    background: #41a447;
     list-style: none;
     margin: 0;
     text-align: center;
@@ -552,7 +552,7 @@ div.input-group>span.input-group-btn>button {
     top: 0;
     left: 0;
     width: 100vw;
-    background: linear-gradient(45deg, #1959ab, #317fe2);
+    background: #41a447;
     margin: 0;
     list-style: none;
     z-index: 90;
@@ -954,11 +954,11 @@ ul.iosheader > li > * {
 
 
 .darkbackground {
-    background: linear-gradient(45deg, #1959ab, #317fe2),  #1959ab;
+    background: rgb(51, 122, 183);
     background-repeat: no-repeat;
 }
 .darkbackground2 {
-    background: linear-gradient(45deg, #19ab4c, #317fe2), #1959ab;
+    background: linear-gradient(45deg, #41a447, rgb(51, 122, 183)), rgb(51, 122, 183);
     background-repeat: no-repeat;
 }
 
@@ -978,21 +978,21 @@ ul.iosheader > li > * {
     color: rgba(255,255,255,0.7);
 }
 
-.darkbackground:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url(../images/background.png);
-    opacity: 0.1;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    z-index: -1;
-}
+/*.darkbackground:after {*/
+    /*content: " ";*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*background: url(../images/background.png);*/
+    /*opacity: 0.1;*/
+    /*background-size: 100%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-y: 50%;*/
+    /*z-index: -1;*/
+/*}*/
 .pinpad button {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255,255,255,0.1);
@@ -1063,6 +1063,10 @@ input
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: rgb(51, 122, 183);
 }
 
 

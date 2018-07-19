@@ -7,3 +7,6 @@ www/.index.html.swp
 *.swo
 .*.sw?
 .idea/
+node_modules/
+test/
+*.keystore
