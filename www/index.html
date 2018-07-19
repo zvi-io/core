@@ -1378,8 +1378,8 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
             <button type="button" class="btn btn-primary" id="btnsettingschangepassphrase" ontouchstart="ts(event)" ontouchend="te(event, ()=>{showTab('#tabchangepassphrase');})">Change Passphrase</button>
             <button type="button" class="btn btn-primary" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doGenerateBackup();})">Backup Wallet</button>
             <button type="button" class="btn btn-primary" id="btnsettingsresortbackup" ontouchstart="ts(event)" ontouchend="te(event, ()=>{showTab('#tabrestore');})">Restore Wallet</button>
-            <button type="button" class="btn btn-primary" id="btnsettingsgateways" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doResetGatewayPrompt();})">Reset Gateways</button>
-            <button type="button" class="btn btn-primary" id="btnsettingsgateways2" ontouchstart="ts(event)" ontouchend="te(event, ()=>{showTab('#tabaddgateway');})">Add Gateway</button>
+            <!--<button type="button" class="btn btn-primary" id="btnsettingsgateways" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doResetGatewayPrompt();})">Reset Gateways</button>-->
+            <!--<button type="button" class="btn btn-primary" id="btnsettingsgateways2" ontouchstart="ts(event)" ontouchend="te(event, ()=>{showTab('#tabaddgateway');})">Add Gateway</button>-->
             <button type="button" class="btn btn-primary" id="btnsettingsofflinetx" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doSubmitOfflineTransaction(0);})">Submit Offline Transaction</button>
         </div>
     </center>
@@ -5598,8 +5598,10 @@ function randShuffleArray(array) {
 }
 
 var currentServer = '';
-var serverStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
-var defaultServerStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
+// var serverStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
+// var defaultServerStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
+var serverStack = [ 'wss://s-east.zvi.io', 'wss://s-west.zvi.io' ];
+var defaultServerStack = [ 'wss://s-east.zvi.io', 'wss://s-west.zvi.io' ];
 var testnetServer = 'wss://s.altnet.rippletest.net:51233';
 
 function resetServerStack() {
