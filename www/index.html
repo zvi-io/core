@@ -1678,10 +1678,20 @@ function onPaymentSelectFromAccount() {
             var tloptions = "";
             for (var x in trustlinesdropdown[account]) 
                 tloptions += trustlinesdropdown[account][x];
-            $('#payasset')[0].innerHTML = xrpoption + tloptions;
+          // console.log("Xrp option " + xrpoption);
+          // console.log("All options " + tloptions);
+          $('#payasset')[0].innerHTML = xrpoption + tloptions;
         } else {
             $('#payasset')[0].innerHTML = xrpoption;
         }
+        // Update Select options with translated currency codes
+        var $options = $('#payasset').children('option');
+        $options.each(function() {
+          var $option = $(this);
+          var current_text = $option.text();
+          // Translate and update text
+          $option.text(translateCoin(current_text));
+        });
     }
 }
 
@@ -3130,7 +3140,7 @@ function showNewOrder(account, direction, currency, issuer, balance, bid, ask) {
         $('#lblntlobuy').show();
     }
 
-    $('#ntloissuer').val(currency + ' - ' + issuer);
+    $('#ntloissuer').val(translateCoin(currency) + ' - ' + issuer);
     $('#ntloissuer').data('currency', currency);
     $('#ntloissuer').data('issuer', issuer);
 
@@ -3168,7 +3178,7 @@ function showModifyTrustline(account, currency, issuer, limit) {
     $('#mtlissueraddr').val(issuer);
     $('#mtlissueraddr').data('content', issuer);    
     $('#mtlcurrency').val(currency);
-    $('#mtlcurrency').data('content', currency);        
+    $('#mtlcurrency').data('content', translateCoin(currency));
     $('#mtllimit').val(limit);
     $('#mtllimit').data('content', limit);        
 
@@ -4348,7 +4358,7 @@ function doModifyTrustline(nonce) {
 
 	var mtladdress = $("#mtladdress").val().trim();
 	var mtlissueraddr = $("#mtlissueraddr").val().trim();
-	var mtlcurrency = (""+$("#mtlcurrency").val()).trim().toUpperCase();
+	var mtlcurrency = translateBack((""+$("#mtlcurrency").val()).trim().toUpperCase());
 	var mtllimit = $("#mtllimit").val().trim();
 
 
@@ -4464,7 +4474,7 @@ function doModifyTrustline(nonce) {
 
         $('#ctladdress')[0].innerText = mtladdress;
         $('#ctlissueraddr')[0].innerText = mtlissueraddr;
-        $('#ctlcurrency')[0].innerText = mtlcurrency;
+        $('#ctlcurrency')[0].innerText = translateCoin(mtlcurrency);
         $('#ctllimit')[0].innerText = mtllimit;
         $('#ctlrippling')[0].innerText = 'UNCHANGED';
 
@@ -4949,7 +4959,7 @@ function doPlaceCancelOrder(nonce, dataset) {
 
 		$('#confirmcancelorderaccount')[0].innerText = account;
 
-        $('#confirmcancelorderpreview')[0].innerText = (sell ? 'SELL ' : 'BUY ') +  currency1 + ' ' + display_currency_amount(parseFloat(''+amount1)) + ' @ ' + currency2 + ' ' + display_currency_amount(parseFloat(''+amount2)/parseFloat(''+amount1));
+        $('#confirmcancelorderpreview')[0].innerText = (sell ? 'SELL ' : 'BUY ') + translateCoin(currency1) + ' ' + display_currency_amount(parseFloat(''+amount1)) + ' @ ' + translateCoin(currency2) + ' ' + display_currency_amount(parseFloat(''+amount2)/parseFloat(''+amount1));
 
         $('#confirmcancelordersequence')[0].innerText = '#' + seq;
 
@@ -5165,7 +5175,7 @@ function doPlaceOrder(nonce) {
 		confirmorderhash = sodium.crypto_generichash(16, JSON.stringify(confirmorder), ''+nonce, 'hex');
 
 		$('#confirmorderaccount')[0].innerText = account;
-		$('#confirmorderasset')[0].innerText = asset;
+		$('#confirmorderasset')[0].innerText = translateCoin(asset);
 		$('#confirmorderissuer')[0].innerText = issuer;
         $('#confirmorderamount')[0].innerText = amount;
         $('#confirmorderprice')[0].innerText = price;
@@ -5562,7 +5572,7 @@ function doPay(nonce) {
 		$('#confirminvoiceid')[0].innerText = ( invid == "" ? "(not provided)" : invid );
 		$('#confirmpayamount')[0].innerText = amount;
 
-        $('#confirmasset')[0].innerText = asset;
+        $('#confirmasset')[0].innerText = translateCoin(asset);
         $('#confirmissuer')[0].innerText = issuer;
 
         if (asset == 'XRP') {
