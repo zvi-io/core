@@ -68,7 +68,7 @@
 	var emergencybackup = false;
 	var offlinemode = false;
 
-    var toastepoc = 36225052; // this is the ledger seq number from which toast wallet bases its offline tx qr codes
+    var toastepoc = 7292540; // this is the ledger seq number from which toast wallet bases its offline tx qr codes
     if (ontestnet) toastepoc = 0;
 
 	var xrpreserve = 20; // this will be updated by querying the server when it connects, if there's an error getting this data the default will be used
@@ -309,7 +309,7 @@
     z-index: 9999999999999999;
     padding: 2em;
 "><button  type="button" class="btn btn-danger" style="float:right; max-width:3em; min-width:3em !important; max-height:3em; " ontouchstart="ts(event)" ontouchend="te(event, ()=>{$('#testnetwarning').hide();})">X</button>
-<br><center><h2>WARNING THIS IS AN ALPHA</h2><p>Do NOT send real XRP. This wallet is connected to the RIPPLE TESTNET.</p></center>
+<br><center><h2>WARNING THIS IS AN ALPHA</h2><p>Do NOT send real ZVI. This wallet is connected to the Zvi TESTNET.</p></center>
 </div>
 
 <div id="tabbackup2" class="screentab" data-primarytab="false" hasback="true" data-title="Encrypted Backup" style="display: none;">
@@ -372,7 +372,7 @@
 
     color:red;
 
-    ">only way for you to regain access to your XRP.</u>&nbsp;
+    ">only way for you to regain access to your ZVI.</u>&nbsp;
     Never share your recovery phrase with anyone.</p></div>
 
 <div><p style="color:black; text-align:justify; font-weight:bold;">This recovery phrase is <u style="color:red">useless without a backup</u>. Please make a backup using the settings menu <u style="color:red">after</u> you finish adding or generating <u style="color:red">all</u> of your addresses. Toast Wallet backups are <u style="color:red">data backups</u>, this means you will <u style="color:red">only have access to the addresses you had in your wallet at the time you made the backup!</u></p></div>
@@ -413,7 +413,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
         </div>
     </div><br>
 	<center>
-		<div><button  type="button" class="btn btn-primary" id="btnrevealsecret" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doRevealRippleSecret($('#rsecaccpassword').val(), $('#accdetailssecretaddress').val());})">Reveal Ripple Secret</button></div>
+		<div><button  type="button" class="btn btn-primary" id="btnrevealsecret" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doRevealRippleSecret($('#rsecaccpassword').val(), $('#accdetailssecretaddress').val());})">Reveal Zvi Secret</button></div>
 	</center>
 	<center>
 		<label id="lblaccsecret">Account Secret</label>
@@ -442,7 +442,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 </div>
 
 <div id="tabnickchange" class="screentab" data-hasback="true" data-title="Change Nickname" style="display:none">
-	<label >Ripple Address</label>
+	<label >Zvi Address</label>
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" readonly="readonly" type="text" placeholder=""  id="nickchangeaddress">
 	<br>
         <label >Account Nickname (optional)</label>
@@ -465,13 +465,13 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 
 <div id="tabaccountflags" class="screentab" data-hasback="true" data-title="Set Account Flags" style="display:none">
 
-    <label >Ripple Address</label>   
+    <label >Zvi Address</label>
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" readonly="readonly" type="text" placeholder=""  id="afaddress">
     	<br>
-        <div style="color:black; text-align:justify;">These are your Ripple Account's global flags. You are strongly advised to research each setting before enabling it. To submit your changes scroll to the bottom.</div>
+        <div style="color:black; text-align:justify;">These are your Zvi Account's global flags. You are strongly advised to research each setting before enabling it. To submit your changes scroll to the bottom.</div>
         <br>
 
-        <div id="afoflwarningdiv" style="display:none; color:red; text-align:justify;">Warning: You are in offline mode and your account flags cannot be read from the XRP Ledger. Please ensure you are aware of the current flags before changing them.<br></div>
+        <div id="afoflwarningdiv" style="display:none; color:red; text-align:justify;">Warning: You are in offline mode and your account flags cannot be read from the ZVI Ledger. Please ensure you are aware of the current flags before changing them.<br></div>
 
     <div id="afofflinecodediv" style="display:none;">
         <br>
@@ -489,7 +489,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
    
 
     <div style="color:black;">
-    	<span class="toggleswitch"  data-after="" id="tglDefaultRipple"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Default Ripple</div>
+    	<span class="toggleswitch"  data-after="" id="tglDefaultRipple"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Default Zvi</div>
     </div>    
 	<br />       
 
@@ -504,7 +504,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 	<br />       
 
     <div style="color:black;">
-    	<span class="toggleswitch"  data-after="" id="tglDisallowIncomingXRP"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Disallow Incoming XRP</div>
+    	<span class="toggleswitch"  data-after="" id="tglDisallowIncomingXRP"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Disallow Incoming ZVI</div>
     </div>    
 	<br />      
 
@@ -542,7 +542,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>
 
 	<div class="paygrouping">
-    <label>Default Ripple</label>
+    <label>Default Zvi</label>
 	<div id="cafdefaultripple"></div>
     </div>
 
@@ -557,7 +557,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>
 
 	<div class="paygrouping">
-    <label>Disallow Incoming XRP</label>
+    <label>Disallow Incoming ZVI</label>
 	<div id="cafdisallowincomingxrp"></div>
     </div>
 
@@ -600,7 +600,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 </div>
 
 <div id="tabaddtrustline" class="screentab" data-hasback="true" data-title="Add Trustline" style="display:none">
-    <label >Ripple Address</label>
+    <label >Zvi Address</label>
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" readonly="readonly" type="text" placeholder=""  id="atladdress">
 	<br>
 
@@ -650,7 +650,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 
 
 <div id="tabmodifytrustline" class="screentab" data-hasback="true" data-title="Modify Trustline" style="display:none">
-    <label >Ripple Address</label>
+    <label >Zvi Address</label>
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" readonly="readonly" type="text" placeholder=""  id="mtladdress">
 	<br>
 
@@ -733,11 +733,11 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 
 
 <div id="tabrekeyaccount" class="screentab" data-hasback="true" data-title="Rekey Account" style="display:none">
-	<p style="color:red; text-align:justify;"><b>WARNING</b>&mdash;This will set a new Ripple secret for the below Ripple address and will make <b>old backups invalid</b>. Only use this if your backup or Ripple secret is compromised!</p>
+	<p style="color:red; text-align:justify;"><b>WARNING</b>&mdash;This will set a new Zvi secret for the below Zvi address and will make <b>old backups invalid</b>. Only use this if your backup or Zvi secret is compromised!</p>
 	<p style="color:red; text-align:justify;">
 	<span class="toggleswitch"><i class="fa fa-toggle-off" aria-hidden="true"></i></span>
 	I understand there's no way to undo this action and my old backups will be rendered useless.</p>
-	<label >Ripple Address</label>
+	<label >Zvi Address</label>
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" readonly="readonly" type="text" placeholder=""  id="rekeyaddress">
         <br><label>Enter your Passphrase</label>
         <div>
@@ -756,7 +756,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
         <li id="btnaccdetailsselecttransactions" ontouchstart="ts(event)" ontouchend="te(event, (x)=>{selectAccountDetailsSubTab(x, 'transactions')})">Transactions</li>
 	</ul>
 	<div id="accdetailsaddressdetails" class="innertab">
-		<div style="color:black; margin-bottom:0.4em;"><span id="accdetailsnickname">Ripple address</span><span id="accdetailsamount" class="amount" style="color:black;"></span></div>
+		<div style="color:black; margin-bottom:0.4em;"><span id="accdetailsnickname">Zvi address</span><span id="accdetailsamount" class="amount" style="color:black;"></span></div>
 		<div class="input-group">
 			<input ontouchend="te(event, quickSelectInput)" type="text" oninput="$(this).val($(this).data('content'));" id="accdetailsaddress" style="color:black">
 			<span class="input-group-btn">
@@ -795,13 +795,13 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 </div>
 
 <div id="tabaddexistingaccount" class="screentab" data-hasback="true" data-title="Add Existing Account" style="display:none">
-	<label >Ripple Secret</label>
+	<label >Zvi Secret</label>
 	<div class="input-group">
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" type="text" placeholder="Enter your secret key here"  id="txtsecret">
 		<span class="input-group-btn"><button  class="btn btn-primary" type="button" ontouchstart="ts(event)" ontouchend="te(event, ()=>{scanQR('#txtsecret', '#vanityaddr', '#txtsecret', decodeSecretAddressURI, existingAddrSecretSwap);})">QR</button></span>
 	</div>
 	<br>
-	<label >Ripple Address</label>
+	<label >Zvi Address</label>
 	<div class="input-group">
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" type="text" placeholder="Only if rekeyed"  id="vanityaddr">
 		<span class="input-group-btn"><button  class="btn btn-primary" type="button" ontouchstart="ts(event)" ontouchend="te(event, ()=>{scanQR('#txtsecret', '#vanityaddr', '#vanityaddr', decodeSecretAddressURI, existingAddrSecretSwap);})">QR</button></span>
@@ -931,7 +931,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 		<input ontouchend="te(event, quickSelectInput)"  type="password" id="setpassword2" class="form-control" placeholder="">
 	</div>
 	<br>
-	<p style="color:black; text-align: justify;">Your passphrase will be used to encrypt your wallet. You will only enter it when you wish to send XRP. It should be long and strong. Never share it with anyone.</p>
+	<p style="color:black; text-align: justify;">Your passphrase will be used to encrypt your wallet. You will only enter it when you wish to send ZVI. It should be long and strong. Never share it with anyone.</p>
 	<br>
 	<center>
 		<button  class="btn btn-primary" id="btnsetpassphrase" type="button" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doResetPassphrase($('#setpassword1').val(), $('#setpassword2').val(), '', function(){blockInput(); setAndShowNewRecoveryPhrase($('#setpassword1').val());}, true);})">Set Passphrase</button>
@@ -980,7 +980,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>        
     <br>
 
-	<div style="text-align:center; color:black;">Once imported your address will need to be activated by sending <span id="minxrp2"></span> XRP to it.</div>
+	<div style="text-align:center; color:black;">Once imported your address will need to be activated by sending <span id="minxrp2"></span> ZVI to it.</div>
 	<br>
 	<center>
         <div><button  type="button" class="btn btn-primary" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doImportGeneratedAccount($('#genaccpassword').val(), $('#newaccnick').val());})">Import this Address</button></div>
@@ -988,7 +988,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>
 
     <div id="tabneworder" class="screentab" data-hasback="true" data-title="New Order" style="padding-bottom: 4em;">
-    <label>Ripple Address</label>
+    <label>Zvi Address</label>
 		<input ontouchend="te(event, quickSelectInput)" class="form-control" readonly="readonly" type="text" placeholder="" id="ntloaddress">
 	
 
@@ -1011,7 +1011,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 	    <input ontouchend="te(event, quickSelectInput)" type="text" id="ntloassetofl" class="form-control" placeholder="Leave blank for XRP">
         <br>
         <label>Issuer Addresss</label>
-        <input ontouchend="te(event, quickSelectInput)" type="text" id="ntloissuerofl" class="form-control" placeholder="Leave blank for XRP">
+        <input ontouchend="te(event, quickSelectInput)" type="text" id="ntloissuerofl" class="form-control" placeholder="Leave blank for ZVI">
 	</div>
 
     <input ontouchend="te(event, quickSelectInput)" class="form-control" readonly="readonly" type="text" placeholder="" id="ntloissuer">
@@ -1287,13 +1287,13 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 
 	<label>Currency</label>
     <div id="oflcurrencydiv" style="display:none">
-	    <input ontouchend="te(event, quickSelectInput)" type="text" id="payassetofl" class="form-control" placeholder="Leave blank for XRP">
+	    <input ontouchend="te(event, quickSelectInput)" type="text" id="payassetofl" class="form-control" placeholder="Leave blank for ZVI">
         <br />
         <label>Issuer Addresss</label>
-        <input ontouchend="te(event, quickSelectInput)" type="text" id="payissuerofl" class="form-control" placeholder="Leave blank for XRP">
+        <input ontouchend="te(event, quickSelectInput)" type="text" id="payissuerofl" class="form-control" placeholder="Leave blank for ZVI">
 	</div>
 
-	<select ontouchend="te(event, quickSelectInput)" id="payasset" class="form-control" onchange=""><option id="optpa-xrp" data-asset="XRP" data-issuer="">XRP</option></select>
+	<select ontouchend="te(event, quickSelectInput)" id="payasset" class="form-control" onchange=""><option id="optpa-xrp" data-asset="XRP" data-issuer="">ZVI</option></select>
     <br/>
 
 	<label >Amount</label>
@@ -1342,7 +1342,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 <div id="tabconnectionselect" class="screentab" data-primarytab="true" data-hasback="false" data-dark="true" data-noright="true" data-title="Connection Issue" style="padding-bottom: 0em;">
     <center>
         <h1>Connection Issue</h1>
-	<p>Toast Wallet is unable to connect either because your device has no network connectivity, or because the public gateway servers Toast Wallet uses to connect to the XRP Ledger are down or under heavy load&mdash;this has nothing to do with the XRP Ledger itself, only the servers that Toast Wallet uses to <i>access</i> the network.</p><br>
+	<p>Toast Wallet is unable to connect either because your device has no network connectivity, or because the public gateway servers Toast Wallet uses to connect to the ZVI Ledger are down or under heavy load&mdash;this has nothing to do with the ZVI Ledger itself, only the servers that Toast Wallet uses to <i>access</i> the network.</p><br>
         <div>
 		<div align="left">
 	        	<label style="color:white; text-align:left;">Specify a different gateway server (optional)</label>
@@ -1448,10 +1448,10 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 <p style="text-align:center;">Please consider supporting us:</p><br>
 	<br>
 	<div>
-		<button class="btn btn-primary" type="button" id="btndonatecustom" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation('')})" style="min-width: 20em;">Donate Custom Amount</button><br><br>
-		<button class="btn btn-success" type="button" id="btndonate20" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation($('#btndonate20').data('amount'))})" style="min-width: 20em;">Donate $20</button><br><br>
-<button class="btn btn-info" type="button" id="btndonate10" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation($('#btndonate10').data('amount'))})" style="min-width: 20em;">Donate $10</button><br><br>
-<button class="btn btn-warning" type="button" id="btndonate5" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation($('#btndonate5').data('amount'))})" style="min-width: 20em;">Donate $5</button><br><br>
+		<button class="btn btn-success" type="button" id="btndonatecustom" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation('')})" style="min-width: 20em;">Donate Custom Amount</button><br><br>
+		<!--<button class="btn btn-success" type="button" id="btndonate20" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation($('#btndonate20').data('amount'))})" style="min-width: 20em;">Donate $20</button><br><br>-->
+<!--<button class="btn btn-info" type="button" id="btndonate10" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation($('#btndonate10').data('amount'))})" style="min-width: 20em;">Donate $10</button><br><br>-->
+<!--<button class="btn btn-warning" type="button" id="btndonate5" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doPopulateDonation($('#btndonate5').data('amount'))})" style="min-width: 20em;">Donate $5</button><br><br>-->
 <button class="btn btn-danger" type="button" id="btndonate0" ontouchstart="ts(event)" ontouchend="te(event, ()=>{showTab('#tabaccounts');})" style="min-width: 20em;">Not at this time</button><br>
 	</div>
 	<br>
@@ -1463,13 +1463,13 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
    <center>
 	<div style="padding: 0.4em;background: rgba(255,0,0,0.7);border-radius: 3px;margin-bottom: 1em;">
 		<p>IMPORTANT NOTICE&mdash;</p>
-		<p>There is a <b><span id="minxrp3">20</span> XRP reserve requirement</b> for all Ripple accounts on the XRP Ledger. When you activate an account you will not get these funds back until the network lowers the reserve requirement.</p>
+		<p>There is a <b><span id="minxrp3">20</span> ZVI reserve requirement</b> for all Zvi accounts on the ZVI Ledger. When you activate an account you will not get these funds back until the network lowers the reserve requirement.</p>
 		<p>Toast Wallet keeps your data on your devices. It does not send your data back to our servers&mdash;we cannot help you if you lose your phrases or backup.</p>
 	</div>
     <h1>Toast Wallet</h1>
 
 	<p>This software is licensed under the GPL 2.0 <br><b>without any warranty. Use at own risk.</b></p>
-	<p>There is a <b><span id="minxrp3">20</span> XRP reserve requirement</b> for all Ripple accounts on the XRP Ledger. When you activate an account you will not get these funds back until the network lowers the reserve requirement.</p>
+	<p>There is a <b><span id="minxrp3">20</span> ZVI reserve requirement</b> for all Zvi accounts on the ZVI Ledger. When you activate an account you will not get these funds back until the network lowers the reserve requirement.</p>
 	<p>Toast Wallet keeps all data on your devices. It does not send any data back to our servers. If you do not keep your phrases and backup secure you will lose your funds.</p>
 <p><a href="https://github.com/ToastWallet/core" target="_blank" style="color:lime; ">Tap here to view full source code on GitHub</a></p></center> 
 <blockquote style="font-size:0.8em; text-align:justify;">GNU GENERAL PUBLIC LICENSE
@@ -1727,7 +1727,7 @@ function doSubmitOfflineTransaction(stage, content) {
         console.log("RED QR: " + account);
         if (account == "" || !validateAddress(account)) {
 
-			return navigator.notification.alert("The QR code you scanned was not a valid Ripple Account", 
+			return navigator.notification.alert("The QR code you scanned was not a valid Zvi Account",
 				function() {
                     doSubmitOfflineTransaction(0);
                     unblockInput();
@@ -1738,7 +1738,7 @@ function doSubmitOfflineTransaction(stage, content) {
 
         var failurefunc = function(fail) {
 
-	        return navigator.notification.alert("An error occured when trying to query the XRP Ledger. This can occur if the gateways Toast Wallet connects to are overloaded, it can also occur if your device has no connectivity. " + fail,
+	        return navigator.notification.alert("An error occured when trying to query the ZVI Ledger. This can occur if the gateways Toast Wallet connects to are overloaded, it can also occur if your device has no connectivity. " + fail,
 				function() {
                     doSubmitOfflineTransaction(0);
                     unblockInput();
@@ -1977,9 +1977,9 @@ function showDonationTab(){
 			exchangerate += parseFloat("" + orders.asks[i].properties.makerExchangeRate);
 		exchangerate = 10.0/exchangerate;
 			
-		$("#btndonate20")[0].innerHTML = "Donate $20 (" + (20.0/exchangerate).toFixed(4) + " XRP)";
-		$("#btndonate10")[0].innerHTML = "Donate $10 (" + (10.0/exchangerate).toFixed(4) + " XRP)";
-		$("#btndonate5")[0].innerHTML = "Donate $5 (" + (5.0/exchangerate).toFixed(4) + " XRP)";
+		$("#btndonate20")[0].innerHTML = "Donate $20 (" + (20.0/exchangerate).toFixed(4) + " ZVI)";
+		$("#btndonate10")[0].innerHTML = "Donate $10 (" + (10.0/exchangerate).toFixed(4) + " ZVI)";
+		$("#btndonate5")[0].innerHTML = "Donate $5 (" + (5.0/exchangerate).toFixed(4) + " ZVI)";
 
 		$("#btndonate20").data('amount', (20.0/exchangerate).toFixed(4));
 		$("#btndonate10").data('amount', (10.0/exchangerate).toFixed(4));
@@ -2453,7 +2453,7 @@ function doSelectAccount(accselected, nickname, trustlinesSubTab) {
 	$("#ra" + accselected).addClass("active");
 	activeaccount = accselected;
 	$("#fromaccountslist>*:not(.bottom-list-button)").remove();
-    $("#fromaccountslist").prepend('<li class="list-group-item accountitem active"><div class="accountline"><a href="#" class="address"><span class="address">'+accselected+'</span></a><span class="amount">'+( accountbalances[accselected] == undefined ? '' :  accountbalances[accselected] + " XRP")+'</span></div><div class="trustlines"></div></li>');
+    $("#fromaccountslist").prepend('<li class="list-group-item accountitem active"><div class="accountline"><a href="#" class="address"><span class="address">'+accselected+'</span></a><span class="amount">'+( accountbalances[accselected] == undefined ? '' :  accountbalances[accselected] + ' ' + translateCoin('XRP')) + '</span></div><div class="trustlines"></div></li>');
 
 
 	showTab("#tabaccountdetails");	
@@ -2470,7 +2470,7 @@ function doSelectAccount(accselected, nickname, trustlinesSubTab) {
 	$("#accdetailsqr").empty();
 	$("#accdetailsqr").append(kjua({text: accselected}));
 	
-	$("#accdetailsnickname")[0].innerText = (nickname == undefined || nickname == "" ? "Ripple address" : nickname);
+	$("#accdetailsnickname")[0].innerText = (nickname == undefined || nickname == "" ? "Zvi address" : nickname);
 
 	
 	$("#accdetailsaddress").val( accselected );
@@ -3068,7 +3068,7 @@ function onToggleIssueOwnCurrency() {
     } else {
         $('#payissuerofl').val('');
         $('#payissuerofl').removeAttr('readonly');
-        $('#payassetofl').attr('placeholder', 'Leave blank for XRP');
+        $('#payassetofl').attr('placeholder', 'Leave blank for ZVI');
         $('#oflcurrencydiv').hide();
         $('#payasset').show();
     }
@@ -3969,7 +3969,7 @@ function doImportExistingAccount(passphrase, nickname, secret, vanityaddr) {
 	generatedAccount.secret = secret;
 	if (vanityaddr != "" && vanityaddr != undefined) {
 		if (!validateAddress(vanityaddr)) {
-			navigator.notification.alert("The Ripple address you've specified is invalid. If you have an ordinary address do not put anything in this field, it will be generated from your secret. If you have a vanity or setRegularKey address then you should use this field.", 
+			navigator.notification.alert("The Zvi address you've specified is invalid. If you have an ordinary address do not put anything in this field, it will be generated from your secret. If you have a vanity or setRegularKey address then you should use this field.",
 				function(){
 					$('#vanityaddr').focus();
 					unblockInput();
@@ -4387,7 +4387,7 @@ function doModifyTrustline(nonce) {
     // however there could be circumstances under which they were incorrectly populated so check anyway
 
     if (!validateAddress(mtladdress)) {
-		return navigator.notification.alert("The address you are attempting to add a trustline to is not a valid Ripple address.", 
+		return navigator.notification.alert("The address you are attempting to add a trustline to is not a valid Zvi address.",
 			function(){
 				$("#mtladdress").focus();
 				unblockInput();
@@ -4399,7 +4399,7 @@ function doModifyTrustline(nonce) {
 
 
     if (!validateAddress(mtlissueraddr)) {
-		return navigator.notification.alert("The counterparty / issuer address for the trustline is not a valid Ripple address.", 
+		return navigator.notification.alert("The counterparty / issuer address for the trustline is not a valid Zvi address.",
 			function(){
 				$("#mtlissueraddr").focus();
 				unblockInput();
@@ -4511,7 +4511,7 @@ function doAddTrustline(nonce) {
     if (atllimit == undefined) atllimit = "0";
 
     if (!validateAddress(atladdress)) {
-		return navigator.notification.alert("The address you are attempting to add a trustline to is not a valid Ripple address.", 
+		return navigator.notification.alert("The address you are attempting to add a trustline to is not a valid Zvi address.",
 			function(){
 				$("#atladdress").focus();
 				unblockInput();
@@ -4523,7 +4523,7 @@ function doAddTrustline(nonce) {
 
 
     if (!validateAddress(atlissueraddr)) {
-		return navigator.notification.alert("The counterparty / issuer address for the trustline is not a valid Ripple address.", 
+		return navigator.notification.alert("The counterparty / issuer address for the trustline is not a valid Zvi address.",
 			function(){
 				$("#atlissueraddr").focus();
 				unblockInput();
@@ -4608,7 +4608,7 @@ function doAddTrustline(nonce) {
 
 
     checkAccountIsFunded(atladdress, 5, 'XRP', '', function(){
-            navigator.notification.confirm("You must have " + xrpreserve + " XRP + 5 XRP for each trustline in the account you are sending from. This reserve is a XRP Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a XRP Ledger fee." , 
+            navigator.notification.confirm("You must have " + xrpreserve + " ZVI + 5 ZVI for each trustline in the account you are sending from. This reserve is a ZVI Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a ZVI Ledger fee." ,
 				function(b){
 					if (debug) console.log("button selected: " + b);
 					if (b == 1) {
@@ -4618,7 +4618,7 @@ function doAddTrustline(nonce) {
 						unblockInput();
 					}
 				}, 
-				"XRP Reserve not met", 
+				"ZVI Reserve not met",
 				[ "Try anyway", "Cancel" ]
                 );},
                 function() {
@@ -4732,7 +4732,7 @@ function doSetAccountFlags(nonce) {
 
 
     checkAccountIsFunded(afaddress, 0.1, 'XRP', '', function(){
-			navigator.notification.confirm("You must have " + xrpreserve + " XRP + 5 XRP for each trustline in the account you are sending from. This reserve is a XRP Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a XRP Ledger fee." , 
+			navigator.notification.confirm("You must have " + xrpreserve + " ZVI + 5 ZVI for each trustline in the account you are sending from. This reserve is a ZVI Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a ZVI Ledger fee." ,
 				function(b){
 					if (debug) console.log("button selected: " + b);
 					if (b == 1) {
@@ -4742,7 +4742,7 @@ function doSetAccountFlags(nonce) {
 						unblockInput();
 					}
 				}, 
-				"XRP Reserve not met", 
+				"ZVI Reserve not met",
 				[ "Try anyway", "Cancel" ]
                 );},
                 function() {
@@ -5086,7 +5086,7 @@ function doPlaceOrder(nonce) {
 	if (validateAddress(account)) {
 		// valid
 	} else {
-		navigator.notification.alert("The account specified is not a valid XRP Ledger account.", 
+		navigator.notification.alert("The account specified is not a valid ZVI Ledger account.",
 			function(){
 				$("#ntloaddress").focus();
 				unblockInput();
@@ -5099,7 +5099,7 @@ function doPlaceOrder(nonce) {
 	if (validateAddress(issuer)) {
 		// valid
 	} else {
-		navigator.notification.alert("The issuer specified is not a valid XRP Ledger account.", 
+		navigator.notification.alert("The issuer specified is not a valid ZVI Ledger account.",
 			function(){
 				$("#ntloissuer").focus();
 				unblockInput();
@@ -5243,7 +5243,7 @@ function doConfirmCancelOrder(passphrase) {
 					sendOfferCancel(passphrase, confirmcancelorder.account, confirmcancelorder.seq,
 						function(wasqueued){
 
-                            navigator.notification.alert("Your cancel order request was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the XRP Ledger" + ( wasqueued ? " shortly." : "." ), 
+                            navigator.notification.alert("Your cancel order request was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the ZVI Ledger" + ( wasqueued ? " shortly." : "." ),
                                 function(){
                                     clearPaymentScreen();
                                     showTab("#tabaccounts");
@@ -5331,7 +5331,7 @@ function doConfirmOrder(passphrase) {
 					sendOfferCreate(passphrase, confirmorder.account, confirmorder.amount, confirmorder.asset, confirmorder.issuer, confirmorder.price, confirmorder.sell, confirmorder.fok, confirmorder.ioc, confirmorder.passive, expiry,
 						function(wasqueued){
 
-                            navigator.notification.alert("Your order was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the XRP Ledger" + ( wasqueued ? " shortly." : "." ), 
+                            navigator.notification.alert("Your order was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the ZVI Ledger" + ( wasqueued ? " shortly." : "." ),
                                 function(){
                                     clearPaymentScreen();
                                     showTab("#tabaccounts");
@@ -5494,7 +5494,7 @@ function doPay(nonce) {
 		// valid
 	} else {
 
-		navigator.notification.alert("The destination address you have entered does not appear to be a valid Ripple address. You can still attempt to send but the XRP Ledger will charge a fee on failure.", 
+		navigator.notification.alert("The destination address you have entered does not appear to be a valid Zvi address. You can still attempt to send but the ZVI Ledger will charge a fee on failure.",
 			function(){
 				$("#toaddress").focus();
 				unblockInput();
@@ -5506,7 +5506,7 @@ function doPay(nonce) {
 	}
 
 	if (payto == payfrom) {
-		navigator.notification.alert("A Ripple address cannot pay XRP from itself to itself.", 
+		navigator.notification.alert("A Zvi address cannot pay ZVI from itself to itself.",
 			function(){
 				$("#toaddress").focus();
 				unblockInput();
@@ -5519,7 +5519,7 @@ function doPay(nonce) {
 
 
     if (asset == 'XRP' && ( issuer != '' || owncurrencytgl)) {
-		navigator.notification.alert("You cannot specify an issuer for XRP.", 
+		navigator.notification.alert("You cannot specify an issuer for ZVI.",
 			function(){
                 if ($('#oflcurrencydiv').is(':visible')) {
                     $("#payassetofl").focus();
@@ -5593,7 +5593,7 @@ function doPay(nonce) {
 	};
 
     checkAccountIsFunded(payfrom, amount, asset, issuer, function(){
-			navigator.notification.confirm("You must leave " + xrpreserve + " XRP reserve in the account you are sending from. This is a XRP Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a XRP Ledger fee." , 
+			navigator.notification.confirm("You must leave " + xrpreserve + " ZVI reserve in the account you are sending from. This is a ZVI Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a ZVI Ledger fee." ,
 				function(b){
 					if (debug) console.log("button selected: " + b);
 					if (b == 1) {
@@ -5603,7 +5603,7 @@ function doPay(nonce) {
 						unblockInput();
 					}
 				}, 
-				"XRP Reserve not met", 
+				"ZVI Reserve not met",
 				[ "Try anyway", "Cancel" ]
                 );}, 
                 function() { 
@@ -5639,7 +5639,7 @@ function checkAccountIsFunded(payfrom, amount, asset, issuer, failurefunc, silen
         }
     }
 
-    return navigator.notification.confirm("Toast Wallet was unable to check your account balance at this time. Please confirm that you have left " + xrpreserve + " XRP reserve in your account after the " + amount + " XRP transaction before continuing.",
+    return navigator.notification.confirm("Toast Wallet was unable to check your account balance at this time. Please confirm that you have left " + xrpreserve + " ZVI reserve in your account after the " + amount + " ZVI transaction before continuing.",
 			function(b){
 				if (b == 1) {
 					return successfunc();
@@ -5647,7 +5647,7 @@ function checkAccountIsFunded(payfrom, amount, asset, issuer, failurefunc, silen
 				    return silentfailurefunc();
 				}
 			}, 
-			"XRP balance not confirmed", 
+			"ZVI balance not confirmed",
 			[ "Yes continue", "Cancel" ]
 	);			
 
@@ -5668,7 +5668,7 @@ var currentServer = '';
 // var defaultServerStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
 var serverStack = [ 'wss://s-east.zvi.io', 'wss://s-west.zvi.io' ];
 var defaultServerStack = [ 'wss://s-east.zvi.io', 'wss://s-west.zvi.io' ];
-var testnetServer = 'wss://s.altnet.rippletest.net:51233';
+var testnetServer = 'wss://s-east.zuz.life';
 
 function resetServerStack() {
 	serverStack = [];
@@ -6547,7 +6547,7 @@ function importAddress(secret, address, nickname, passphrase, successfunc, failu
 				};
 
 				db.upsert("accounts", function(doc) { return { data: JSON.stringify(accounts)}; }).then(function(x){
-					navigator.notification.alert("Ripple address added successfully.", function(){}, "Success", "OK");
+					navigator.notification.alert("Zvi address added successfully.", function(){}, "Success", "OK");
 					successfunc();
 				}).catch(function(x){
 					navigator.notification.alert("Failed to add address.", function(){}, "Error", "OK");
@@ -6568,7 +6568,7 @@ function importAddress(secret, address, nickname, passphrase, successfunc, failu
 	if (address == undefined) address = "";
 
 	if (!validateSecret(secret)) {
-		navigator.notification.alert("Invalid Ripple secret.", failurefunc, "Error", "OK");
+		navigator.notification.alert("Invalid Zvi secret.", failurefunc, "Error", "OK");
 		return;
 	}
 
@@ -6583,7 +6583,7 @@ function importAddress(secret, address, nickname, passphrase, successfunc, failu
             console.log(settings);
             if ('disableMasterKey' in settings && settings['disableMasterKey']) {
                 // they are trying to add an account using a secret that has been disabled
-                navigator.notification.alert("The secret you are attempting to add has been disabled on the corresponding Ripple account, and therefore cannot be used. If this is an account you own then you need to add it using the current regular key.", failurefunc, "Failure", "OK");
+                navigator.notification.alert("The secret you are attempting to add has been disabled on the corresponding Zvi account, and therefore cannot be used. If this is an account you own then you need to add it using the current regular key.", failurefunc, "Failure", "OK");
             } else {
                 // this is fine, the account already exists but the master key is still valid
                 return _import(secret, address, nickname, passphrase, successfunc, failurefunc);
@@ -6610,7 +6610,7 @@ function importAddress(secret, address, nickname, passphrase, successfunc, failu
 		} else {
             
             if (offlinemode) {
-                return navigator.notification.alert("You are adding an account with a regular key in offline mode. Toast Wallet has no way to ensure this regular key corresponds to your Ripple account. The account will be added however transactions may fail if the regular key is incorrect.", ()=>{return _import(secret, address, nickname, passphrase, successfunc, failurefunc);}, "Warning", "OK");
+                return navigator.notification.alert("You are adding an account with a regular key in offline mode. Toast Wallet has no way to ensure this regular key corresponds to your Zvi account. The account will be added however transactions may fail if the regular key is incorrect.", ()=>{return _import(secret, address, nickname, passphrase, successfunc, failurefunc);}, "Warning", "OK");
             }
 
 			// this could be a set regular key account, check the regular key
@@ -7325,7 +7325,7 @@ function doRekeyAccount(passphrase) {
 								rekeyAccount(passphrase, false, suc, fail);
 							}
 						}, 
-						"XRP balance not confirmed", 
+						"ZVI balance not confirmed",
 						[ "Disable Master Key", "Do NOT Disable" ]
 					);					
 				} else {
@@ -8221,7 +8221,7 @@ function doGetTransactions(address, marker) {
 	//blockInput();
 	$.ajax({
 		complete: function() { unblockInput(); },
-		url: 'https://data.ripple.com/v2/accounts/' + 
+		url: 'https://data.zvi.io/v2/accounts/' +
 		address + '/payments?currency=XRP&limit=10&marker=' +
 		marker
 	}).done(function(x){
@@ -8232,7 +8232,7 @@ function doGetTransactions(address, marker) {
 		var count = 0;
 		if (x.payments != undefined) {
 			for (var i in x.payments) {
-				tx += '<li class="txrow '+(x.payments[i].source == address ? 'txsent' : 'txreceived')+'" data-txhash="'+x.payments[i].tx_hash+'" ontouchstart="ts(event)" ontouchend="te(event, ()=>{window.open(\'https://ripple.com/build/ripple-info-tool/?'+x.payments[i].tx_hash+'#'+x.payments[i].tx_hash+'\', \'_system\');})">';
+				tx += '<li class="txrow '+(x.payments[i].source == address ? 'txsent' : 'txreceived')+'" data-txhash="'+x.payments[i].tx_hash+'" ontouchstart="ts(event)" ontouchend="te(event, ()=>{window.open(\'https://charts.zvi.io/#/transactions/'+x.payments[i].tx_hash+'\', \'_system\');})">';
 				var outgoing = (x.payments[i].source == address);
 
 				tx += '<span><i class="fa ' + ( outgoing ? 'fa-paper-plane-o' : 'fa-inbox' ) + '" aria-hidden="true"></i>';
