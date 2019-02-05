@@ -577,6 +577,29 @@ button, button:focus, button:active, button:hover {
 }
 
 
+.pinpad_pending:before {
+    content: "Please login to finalize your payment...";
+    line-height: 4em;
+    color: #ffF000;
+    font-style: italic;
+}
+.pinpad_pending {
+    margin-top: calc(50vh - 21em) !important;
+}
+
+
+.textarealikediv {
+    color: black;
+    font-family: monospace;
+    font-size: 0.8em;
+    word-break: break-all;
+    border: 1px solid #cccccc;
+    padding: 0.5em;
+    background: #eeeeee;
+    border-radius: 0.5em;
+    user-select: text !important;
+}
+
 .trustline {
     border-radius: 2px;
     padding-top: 2px;

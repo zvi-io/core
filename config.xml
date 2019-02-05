@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.zvi.toastwallet.core" version="2.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Zvi Wallet beta</name>
+    <name>SystemD Wallet</name>
     <description>
-        Zvi Wallet is a Zvi wallet for Android and iOS.
+        SystemD Wallet is a SYD wallet for Android and iOS.
     </description>
     <author email="support@toastwallet.com" href="https://toastwallet.com">
         Toast Wallet
