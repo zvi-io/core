@@ -41,8 +41,8 @@
   "verifyUpdateCodeSignature": "true",
   "dependencies": {
     "cordova-android": "~6.1.2",
-    "cordova-android-support-gradle-release": "^1.4.3",
-    "cordova-browser": "4.1.0",
+    "cordova-android-support-gradle-release": "^1.4.7",
+    "cordova-browser": "4.1.*",
     "electron-debug": "^2.0.0",
     "menu": "^0.2.5"
   },

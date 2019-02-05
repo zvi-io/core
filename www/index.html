@@ -59,7 +59,7 @@
 </head>
 <body class="loading">
 <div id="inputblocker" style="display:none">&nbsp;</div>
-<div id="gracefulerror" style="display:none; z-index:99999999; padding: 2em; background-color:arbg(255,255,255,0.75); color: black; position:absolute; left: 0; top: 0; width: 100vw; height: 100vh;"></div>
+<div id="gracefulerror" style="display:none; z-index:99999999; padding: 2em; background-color:rgba(255,255,255,0.75); color: black; position:absolute; left: 0; top: 0; width: 100vw; height: 100vh;"></div>
 <i id="morecontentindicator" class="fa fa-chevron-circle-down bounce" aria-hidden="true"></i>
 <div id="offlinemodewarning" style="position:absolute; top:0; left:0; width:100%; height:15px; background:#00abff; color:white; margin:0px; padding:0px; font-size:11px; text-align:center; z-index:9999999; display:none;">OFFLINE MODE</div>
 <script>
@@ -360,7 +360,7 @@
     z-index: 9999999999999999;
     padding: 2em;
 "><button  type="button" class="btn btn-danger" style="float:right; max-width:3em; min-width:3em !important; max-height:3em; " ontouchstart="ts(event)" ontouchend="te(event, ()=>{$('#testnetwarning').hide();})">X</button>
-<br><center><h2>WARNING THIS IS AN ALPHA</h2><p>Do NOT send real ZVI. This wallet is connected to the Zvi TESTNET.</p></center>
+<br><center><h2>WARNING THIS IS AN ALPHA</h2><p>Do NOT send real SYD. This wallet is connected to the SystemD TESTNET.</p></center>
 </div>
 
 <div id="tabbackup2" class="screentab" data-primarytab="false" hasback="true" data-title="Encrypted Backup" style="display: none;">
@@ -368,7 +368,7 @@
         <h3 style="color:black; text-align:center;">The data below is your encrypted wallet backup</h3>
         <p style="color:black;">You should make a new backup whenever you add a new account to your wallet, change your passphrase or change your pin. Toast Wallet will prompt you when a new backup is required.</p>
     	<center>
-		    <button  id="btncopywallet" data-clipboard-target="#walletbackup" "type="button" class="btn btn-info copybtnaction">Copy</button>
+		    <button  id="btncopywallet" data-clipboard-target="#walletbackup" type="button" class="btn btn-info copybtnaction">Copy</button>
 	    </center>
     	<label>Your backup</label>
 	    <textarea oninput="$(this).val($(this).data('content'));" style="color:black;" id="walletbackup"></textarea>
@@ -423,7 +423,7 @@
 
     color:red;
 
-    ">only way for you to regain access to your ZVI.</u>&nbsp;
+    ">only way for you to regain access to your SYD.</u>&nbsp;
     Never share your recovery phrase with anyone.</p></div>
 
 <div><p style="color:black; text-align:justify; font-weight:bold;">This recovery phrase is <u style="color:red">useless without a backup</u>. Please make a backup using the settings menu <u style="color:red">after</u> you finish adding or generating <u style="color:red">all</u> of your addresses. Toast Wallet backups are <u style="color:red">data backups</u>, this means you will <u style="color:red">only have access to the addresses you had in your wallet at the time you made the backup!</u></p></div>
@@ -519,10 +519,10 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     <label >SystemD Address</label>
 		<input ontouchend="te(event, quickSelectInput)"  class="form-control" readonly="readonly" type="text" placeholder=""  id="afaddress">
     	<br>
-        <div style="color:black; text-align:justify;">These are your Zvi Account's global flags. You are strongly advised to research each setting before enabling it. To submit your changes scroll to the bottom.</div>
+        <div style="color:black; text-align:justify;">These are your SystemD Account's global flags. You are strongly advised to research each setting before enabling it. To submit your changes scroll to the bottom.</div>
         <br>
 
-        <div id="afoflwarningdiv" style="display:none; color:red; text-align:justify;">Warning: You are in offline mode and your account flags cannot be read from the ZVI Ledger. Please ensure you are aware of the current flags before changing them.<br></div>
+        <div id="afoflwarningdiv" style="display:none; color:red; text-align:justify;">Warning: You are in offline mode and your account flags cannot be read from the SYD Ledger. Please ensure you are aware of the current flags before changing them.<br></div>
 
     <div id="afofflinecodediv" style="display:none;">
         <br>
@@ -540,7 +540,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
    
 
     <div style="color:black;">
-    	<span class="toggleswitch"  data-after="" id="tglDefaultRipple"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Default Zvi</div>
+    	<span class="toggleswitch"  data-after="" id="tglDefaultRipple"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Default SystemD</div>
     </div>    
 	<br />       
 
@@ -555,7 +555,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 	<br />       
 
     <div style="color:black;">
-    	<span class="toggleswitch"  data-after="" id="tglDisallowIncomingXRP"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Disallow Incoming ZVI</div>
+    	<span class="toggleswitch"  data-after="" id="tglDisallowIncomingXRP"><i class="fa fa-toggle-off" aria-hidden="true"></i></span><div style="line-height: 2.5em; font-weight: bold;">Disallow Incoming SYD</div>
     </div>    
 	<br />      
 
@@ -593,7 +593,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>
 
 	<div class="paygrouping">
-    <label>Default Zvi</label>
+    <label>Default SystemD</label>
 	<div id="cafdefaultripple"></div>
     </div>
 
@@ -608,7 +608,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>
 
 	<div class="paygrouping">
-    <label>Disallow Incoming ZVI</label>
+    <label>Disallow Incoming SYD</label>
 	<div id="cafdisallowincomingxrp"></div>
     </div>
 
@@ -1033,7 +1033,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 		<input ontouchend="te(event, quickSelectInput)"  type="password" id="setpassword2" class="form-control" placeholder="">
 	</div>
 	<br>
-	<p style="color:black; text-align: justify;">Your passphrase will be used to encrypt your wallet. You will only enter it when you wish to send ZVI. It should be long and strong. Never share it with anyone.</p>
+	<p style="color:black; text-align: justify;">Your passphrase will be used to encrypt your wallet. You will only enter it when you wish to send SYD. It should be long and strong. Never share it with anyone.</p>
 	<br>
 	<center>
 		<button  class="btn btn-primary" id="btnsetpassphrase" type="button" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doResetPassphrase($('#setpassword1').val(), $('#setpassword2').val(), '', function(){blockInput(); setAndShowNewRecoveryPhrase($('#setpassword1').val());}, true);})">Set Passphrase</button>
@@ -1082,7 +1082,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
     </div>        
     <br>
 
-	<div style="text-align:center; color:black;">Once imported your address will need to be activated by sending <span id="minxrp2"></span> ZVI to it.</div>
+	<div style="text-align:center; color:black;">Once imported your address will need to be activated by sending <span id="minxrp2"></span> SYD to it.</div>
 	<br>
 	<center>
         <div><button  type="button" class="btn btn-primary" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doImportGeneratedAccount($('#genaccpassword').val(), $('#newaccnick').val());})">Import this Address</button></div>
@@ -1113,7 +1113,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 	    <input ontouchend="te(event, quickSelectInput)" type="text" id="ntloassetofl" class="form-control" placeholder="Leave blank for XRP">
         <br>
         <label>Issuer Addresss</label>
-        <input ontouchend="te(event, quickSelectInput)" type="text" id="ntloissuerofl" class="form-control" placeholder="Leave blank for ZVI">
+        <input ontouchend="te(event, quickSelectInput)" type="text" id="ntloissuerofl" class="form-control" placeholder="Leave blank for SYD">
 	</div>
 
     <input ontouchend="te(event, quickSelectInput)" class="form-control" readonly="readonly" type="text" placeholder="" id="ntloissuer">
@@ -1389,13 +1389,13 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 
 	<label>Currency</label>
     <div id="oflcurrencydiv" style="display:none">
-	    <input ontouchend="te(event, quickSelectInput)" type="text" id="payassetofl" class="form-control" placeholder="Leave blank for ZVI">
+	    <input ontouchend="te(event, quickSelectInput)" type="text" id="payassetofl" class="form-control" placeholder="Leave blank for SYD">
         <br />
         <label>Issuer Addresss</label>
-        <input ontouchend="te(event, quickSelectInput)" type="text" id="payissuerofl" class="form-control" placeholder="Leave blank for ZVI">
+        <input ontouchend="te(event, quickSelectInput)" type="text" id="payissuerofl" class="form-control" placeholder="Leave blank for SYD">
 	</div>
 
-	<select ontouchend="te(event, quickSelectInput)" id="payasset" class="form-control" onchange=""><option id="optpa-xrp" data-asset="XRP" data-issuer="">ZVI</option></select>
+	<select ontouchend="te(event, quickSelectInput)" id="payasset" class="form-control" onchange=""><option id="optpa-xrp" data-asset="XRP" data-issuer="">SYD</option></select>
     <br/>
 
 	<label >Amount</label>
@@ -1444,7 +1444,7 @@ I understand that the recovery phrase IS NOT A WALLET BACKUP.</p><br>
 <div id="tabconnectionselect" class="screentab" data-primarytab="true" data-hasback="false" data-dark="true" data-noright="true" data-title="Connection Issue" style="padding-bottom: 0em;">
     <center>
         <h1>Connection Issue</h1>
-	<p>Toast Wallet is unable to connect either because your device has no network connectivity, or because the public gateway servers Toast Wallet uses to connect to the ZVI Ledger are down or under heavy load&mdash;this has nothing to do with the ZVI Ledger itself, only the servers that Toast Wallet uses to <i>access</i> the network.</p><br>
+	<p>Toast Wallet is unable to connect either because your device has no network connectivity, or because the public gateway servers Toast Wallet uses to connect to the SYD Ledger are down or under heavy load&mdash;this has nothing to do with the SYD Ledger itself, only the servers that Toast Wallet uses to <i>access</i> the network.</p><br>
         <div>
 		<div align="left">
 	        	<label style="color:white; text-align:left;">Specify a different gateway server (optional)</label>
@@ -1675,7 +1675,7 @@ NO WARRANTY
 	<br>
 	<p style="text-align:center;">If you do not agree then close and uninstall this application.</p>
 </center>
-<p><center style="color:white;" data-version="version">Version: 2.4.0</p>
+    <p><center style="color:white;" data-version="version">Version: 2.4.0</center></p>
 <p><center style="color:white;" class="deviceversion"></center></p>
 </div>
 
@@ -1691,8 +1691,8 @@ NO WARRANTY
 
 <script>
 // Global translate function to translate currencies
-var native_currency = 'ZVI';
-var native_currency_name = 'Zvi';
+var native_currency = 'SYD';
+var native_currency_name = 'SystemD';
 var conversions = [
   {original: 'XSD', translated: 'XSDR'},
   {original: 'XSY', translated: 'XSYN'}
@@ -1838,7 +1838,7 @@ function doSubmitOfflineTransaction(stage, content) {
 
         var failurefunc = function(fail) {
 
-	        return navigator.notification.alert("An error occured when trying to query the ZVI Ledger. This can occur if the gateways Toast Wallet connects to are overloaded, it can also occur if your device has no connectivity. " + fail,
+	        return navigator.notification.alert("An error occured when trying to query the SYD Ledger. This can occur if the gateways Toast Wallet connects to are overloaded, it can also occur if your device has no connectivity. " + fail,
 				function() {
                     doSubmitOfflineTransaction(0);
                     unblockInput();
@@ -2077,9 +2077,9 @@ function showDonationTab(){
 			exchangerate += parseFloat("" + orders.asks[i].properties.makerExchangeRate);
 		exchangerate = 10.0/exchangerate;
 			
-		$("#btndonate20")[0].innerHTML = "Donate $20 (" + (20.0/exchangerate).toFixed(4) + " ZVI)";
-		$("#btndonate10")[0].innerHTML = "Donate $10 (" + (10.0/exchangerate).toFixed(4) + " ZVI)";
-		$("#btndonate5")[0].innerHTML = "Donate $5 (" + (5.0/exchangerate).toFixed(4) + " ZVI)";
+		$("#btndonate20")[0].innerHTML = "Donate $20 (" + (20.0/exchangerate).toFixed(4) + " SYD)";
+		$("#btndonate10")[0].innerHTML = "Donate $10 (" + (10.0/exchangerate).toFixed(4) + " SYD)";
+		$("#btndonate5")[0].innerHTML = "Donate $5 (" + (5.0/exchangerate).toFixed(4) + " SYD)";
 
 		$("#btndonate20").data('amount', (20.0/exchangerate).toFixed(4));
 		$("#btndonate10").data('amount', (10.0/exchangerate).toFixed(4));
@@ -3169,7 +3169,7 @@ function onToggleIssueOwnCurrency() {
     } else {
         $('#payissuerofl').val('');
         $('#payissuerofl').removeAttr('readonly');
-        $('#payassetofl').attr('placeholder', 'Leave blank for ZVI');
+        $('#payassetofl').attr('placeholder', 'Leave blank for SYD');
         $('#oflcurrencydiv').hide();
         $('#payasset').show();
     }
@@ -4730,7 +4730,7 @@ function doAddTrustline(nonce) {
 
 
     checkAccountIsFunded(atladdress, 5, 'XRP', '', function(){
-            navigator.notification.confirm("You must have " + xrpreserve + " ZVI + 5 ZVI for each trustline in the account you are sending from. This reserve is a ZVI Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a ZVI Ledger fee." ,
+            navigator.notification.confirm("You must have " + xrpreserve + " SYD + 5 SYD for each trustline in the account you are sending from. This reserve is a SYD Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a SYD Ledger fee." ,
 				function(b){
 					if (debug) console.log("button selected: " + b);
 					if (b == 1) {
@@ -4740,7 +4740,7 @@ function doAddTrustline(nonce) {
 						unblockInput();
 					}
 				}, 
-				"ZVI Reserve not met",
+				"SYD Reserve not met",
 				[ "Try anyway", "Cancel" ]
                 );},
                 function() {
@@ -4854,7 +4854,7 @@ function doSetAccountFlags(nonce) {
 
 
     checkAccountIsFunded(afaddress, 0.1, 'XRP', '', function(){
-			navigator.notification.confirm("You must have " + xrpreserve + " ZVI + 5 ZVI for each trustline in the account you are sending from. This reserve is a ZVI Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a ZVI Ledger fee." ,
+			navigator.notification.confirm("You must have " + xrpreserve + " SYD + 5 SYD for each trustline in the account you are sending from. This reserve is a SYD Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a SYD Ledger fee." ,
 				function(b){
 					if (debug) console.log("button selected: " + b);
 					if (b == 1) {
@@ -4864,7 +4864,7 @@ function doSetAccountFlags(nonce) {
 						unblockInput();
 					}
 				}, 
-				"ZVI Reserve not met",
+				"SYD Reserve not met",
 				[ "Try anyway", "Cancel" ]
                 );},
                 function() {
@@ -5365,7 +5365,7 @@ function doConfirmCancelOrder(passphrase) {
 					sendOfferCancel(passphrase, confirmcancelorder.account, confirmcancelorder.seq,
 						function(wasqueued){
 
-                            navigator.notification.alert("Your cancel order request was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the ZVI Ledger" + ( wasqueued ? " shortly." : "." ),
+                            navigator.notification.alert("Your cancel order request was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the SYD Ledger" + ( wasqueued ? " shortly." : "." ),
                                 function(){
                                     clearPaymentScreen();
                                     showTab("#tabaccounts");
@@ -5453,7 +5453,7 @@ function doConfirmOrder(passphrase) {
 					sendOfferCreate(passphrase, confirmorder.account, confirmorder.amount, confirmorder.asset, confirmorder.issuer, confirmorder.price, confirmorder.sell, confirmorder.fok, confirmorder.ioc, confirmorder.passive, expiry,
 						function(wasqueued){
 
-                            navigator.notification.alert("Your order was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the ZVI Ledger" + ( wasqueued ? " shortly." : "." ),
+                            navigator.notification.alert("Your order was successfully " + ( wasqueued ? "queued, and will be " : "" ) + "submitted to the SYD Ledger" + ( wasqueued ? " shortly." : "." ),
                                 function(){
                                     clearPaymentScreen();
                                     showTab("#tabaccounts");
@@ -5641,7 +5641,7 @@ function doPay(nonce) {
 
 
     if (asset == 'XRP' && ( issuer != '' || owncurrencytgl)) {
-		navigator.notification.alert("You cannot specify an issuer for ZVI.",
+		navigator.notification.alert("You cannot specify an issuer for SYD.",
 			function(){
                 if ($('#oflcurrencydiv').is(':visible')) {
                     $("#payassetofl").focus();
@@ -5715,7 +5715,7 @@ function doPay(nonce) {
 	};
 
     checkAccountIsFunded(payfrom, amount, asset, issuer, function(){
-			navigator.notification.confirm("You must leave " + xrpreserve + " ZVI reserve in the account you are sending from. This is a ZVI Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a ZVI Ledger fee." ,
+			navigator.notification.confirm("You must leave " + xrpreserve + " SYD reserve in the account you are sending from. This is a SYD Ledger requirement. In some circumstances this message may appear in error if you believe that to be the case you can opt to attempt the transaction however this will attract a SYD Ledger fee." ,
 				function(b){
 					if (debug) console.log("button selected: " + b);
 					if (b == 1) {
@@ -5725,7 +5725,7 @@ function doPay(nonce) {
 						unblockInput();
 					}
 				}, 
-				"ZVI Reserve not met",
+				"SYD Reserve not met",
 				[ "Try anyway", "Cancel" ]
                 );}, 
                 function() { 
@@ -5761,7 +5761,7 @@ function checkAccountIsFunded(payfrom, amount, asset, issuer, failurefunc, silen
         }
     }
 
-    return navigator.notification.confirm("Toast Wallet was unable to check your account balance at this time. Please confirm that you have left " + xrpreserve + " ZVI reserve in your account after the " + amount + " ZVI transaction before continuing.",
+    return navigator.notification.confirm("Toast Wallet was unable to check your account balance at this time. Please confirm that you have left " + xrpreserve + " SYD reserve in your account after the " + amount + " SYD transaction before continuing.",
 			function(b){
 				if (b == 1) {
 					return successfunc();
@@ -5769,7 +5769,7 @@ function checkAccountIsFunded(payfrom, amount, asset, issuer, failurefunc, silen
 				    return silentfailurefunc();
 				}
 			}, 
-			"ZVI balance not confirmed",
+			"SYD balance not confirmed",
 			[ "Yes continue", "Cancel" ]
 	);			
 
@@ -5788,9 +5788,9 @@ function randShuffleArray(array) {
 var currentServer = '';
 // var serverStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
 // var defaultServerStack = [ 'wss://s1.ripple.com', 'wss://s3.ripple.com', 'wss://s-west.ripple.com', 'wss://s-east.ripple.com', 'wss://s2.ripple.com' ];
-var serverStack = [ 'wss://s-east.zvi.io', 'wss://s-west.zvi.io' ];
-var defaultServerStack = [ 'wss://s-east.zvi.io', 'wss://s-west.zvi.io' ];
-var testnetServer = 'wss://s-east.zuz.life';
+var serverStack = [ 'wss://s-east.vokez.io', 'wss://s-west.vokez.io' ];
+var defaultServerStack = [ 'wss://s-east.vokez.io', 'wss://s-west.vokez.io' ];
+var testnetServer = 'wss://s-test.vokez.io';
 
 function resetServerStack() {
 	serverStack = [];
@@ -7447,7 +7447,7 @@ function doRekeyAccount(passphrase) {
 								rekeyAccount(passphrase, false, suc, fail);
 							}
 						}, 
-						"ZVI balance not confirmed",
+						"SYD balance not confirmed",
 						[ "Disable Master Key", "Do NOT Disable" ]
 					);					
 				} else {
@@ -8348,7 +8348,7 @@ function doViewTransaction(hash) {
     $('#vtxhash').val(hash);
     $.ajax({
 		complete: function() { unblockInput(); },
-		url: 'https://data.ripple.com/v2/transactions/' + hash
+		url: 'https://data.sydcharts.io/v2/transactions/' + hash
 	}).done(function(x){
         //todo: better server error handling here
 
@@ -8389,7 +8389,7 @@ function doGetTransactions(address, marker) {
 	//blockInput();
 	$.ajax({
 		complete: function() { unblockInput(); },
-		url: 'https://data.zvi.io/v2/accounts/' +
+		url: 'https://data.sydcharts.io/v2/accounts/' +
 		address + '/payments?currency=XRP&limit=10&marker=' +
 		marker
 	}).done(function(x){
@@ -8399,7 +8399,7 @@ function doGetTransactions(address, marker) {
 		var tx = "";
 		var count = 0;
 		if (x.payments != undefined) {
-			for (var i in x.payments) {=
+			for (var i in x.payments) {
 				tx += '<li class="txrow '+(x.payments[i].source == address ? 'txsent' : 'txreceived')+'" data-txhash="'+x.payments[i].tx_hash+'" ontouchstart="ts(event)" ontouchend="te(event, ()=>{window.open(\'https://sydcharts.io/#/transactions/'+x.payments[i].tx_hash+'\', \'_system\');})">';
 				// tx += '<li class="txrow '+(x.payments[i].source == address ? 'txsent' : 'txreceived')+'" data-txhash="'+x.payments[i].tx_hash+'" ontouchstart="ts(event)" ontouchend="te(event, ()=>{doViewTransaction(\''+x.payments[i].tx_hash+'\')})">';
 				var outgoing = (x.payments[i].source == address);
